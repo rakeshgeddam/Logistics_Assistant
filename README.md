@@ -2,18 +2,8 @@
 An end-to-end real-time event logistics assistant with Kafka, Spark Streaming, and Airflow, integrating traffic APIs and automated workflows to dynamically adjust user participation in events
 
 
-flowchart LR
-    U[Users (Location + Event Info)] --> K[(Kafka - Event Stream)]
-    T[Traffic API (HERE/Google/Mock)] --> K
-    K --> S[Spark Structured Streaming<br/>(ETA Calculation)]
-    S --> WH[(Warehouse - Postgres/BigQuery)]
-    WH --> D[Dashboard (Superset/Grafana)]
-    S --> A[Airflow DAG<br/>(Workflow Decisions)]
-    A --> DB[(Event Metadata DB<br/>Online variant?)]
-    A -->|If Online Variant| E[Send Email/Slack<br/>Notification]
-    A -->|If No Online Variant| O[Organizer Reschedule Request]
+<img width="1243" height="336" alt="image" src="https://github.com/user-attachments/assets/e3c3769c-40bb-45a5-857a-0929b2bcd6e4" />
 
-Alright, here’s a README-style write-up you could drop straight into your GitHub repo alongside the diagram:
 
 # Real-Time Event Assistant
 
